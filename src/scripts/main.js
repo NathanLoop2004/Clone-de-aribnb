@@ -30,4 +30,5 @@ AbrirCerrarFiltro()
 AgregaryRestarAmbosInput()
 agregarDivInput()
 escuchadorDeInputs()
+Filtrado()
 

@@ -219,10 +219,11 @@ export function Filtrado() {
     formulario.addEventListener("submit", function(e){
         e.preventDefault();
         cardsContedor.innerHTML = "";
-        traerSkeleton(); // Muestra el skeleton al filtrar
+        traerSkeleton();
+        CerrarFiltro(); // <-- Se cierra el filtro inmediatamente, antes del skeleton
 
         setTimeout(() => {
-            cardsContedor.innerHTML = ""; // Limpia el skeleton
+            cardsContedor.innerHTML = "";
             let formdata1 = new FormData(formulario);
             let input1 = formdata1.get("location");
             let input2 = formdata1.get("guest");
@@ -235,14 +236,13 @@ export function Filtrado() {
                 } else if (input1 && !input2) {
                     return cards.city.toLowerCase().includes(input1.toLowerCase());
                 } else {
-                    return true; // mostrar todas
+                    return true;
                 }
             });
 
             filtradas.forEach(renderCard);
 
-            CerrarFiltro();
-        }, 2000); // 2 segundos de skeleton, puedes ajustar el tiempo
+        }, 2000);
     });
 }
 

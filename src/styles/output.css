@@ -693,6 +693,26 @@
       padding-left: calc(var(--spacing) * 20);
     }
   }
+  .lg\:pl-50 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 50);
+    }
+  }
+  .lg\:pl-100 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 100);
+    }
+  }
+  .lg\:pl-110 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 110);
+    }
+  }
+  .lg\:pl-150 {
+    @media (width >= 64rem) {
+      padding-left: calc(var(--spacing) * 150);
+    }
+  }
   .lg\:text-\[30px\] {
     @media (width >= 64rem) {
       font-size: 30px;
@@ -756,6 +776,21 @@
   .xl\:grid-cols-4 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .xl\:pl-140 {
+    @media (width >= 80rem) {
+      padding-left: calc(var(--spacing) * 140);
+    }
+  }
+  .xl\:pl-150 {
+    @media (width >= 80rem) {
+      padding-left: calc(var(--spacing) * 150);
+    }
+  }
+  .xl\:pl-160 {
+    @media (width >= 80rem) {
+      padding-left: calc(var(--spacing) * 160);
     }
   }
   .\32 xl\:mr-\[-540px\] {
