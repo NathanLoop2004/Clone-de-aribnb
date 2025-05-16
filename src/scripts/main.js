@@ -7,8 +7,13 @@
 import traerCards from './cards.js';
 
 //Import de logica de Filter
-import AbrirCerrarFiltro  from './utils.js';
+import AbrirCerrarFiltro, { AgregaryRestarAmbosInput }  from './utils.js';
+//logica de numeros Input
+import { agregarDivInput } from './utils.js';
+import { escuchadorDeInputs } from './utils.js';
 
 traerCards()
 AbrirCerrarFiltro()
-
+AgregaryRestarAmbosInput()
+agregarDivInput()
+escuchadorDeInputs()
