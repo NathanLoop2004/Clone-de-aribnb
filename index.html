@@ -18,7 +18,7 @@
 <div class="fixed inset-0 bg-[#0000007c] transition hidden filter-entero " id="filter">
    
 <!-- Maqueta de la seccion de Filtros-->   
-<div class="w-[375px] md:w-[100%] h-[520px] bg-white">
+<form class="w-[375px] md:w-[100%] h-[520px] bg-white" id="formulario">
       
       <!-- Edit your Shearch Section -->
       <section class=" border-black w-[375px] md:w-[100%] h-[60px] flex flex-row pt-4">
@@ -40,20 +40,39 @@
    <!-- Section Index -->
 <section class=" border-black w-[375px] lg:w-[100%] h-[130px] flex justify-center ">
      <!-- Section Principal -->
-       <section class=" border-black shadow-md/30 w-[340px] lg:w-[800px]  h-[120px] lg:h-[50px] rounded-[20px] flex flex-col lg:flex-row lg:items-center">
+       <section class=" border-black shadow-md/30 w-[340px] lg:w-[800px] 2xl:w-[1200px] h-[120px] lg:h-[50px] rounded-[20px] flex flex-col lg:flex-row lg:items-center">
 
             <div class=" border-black mt-3">
              <section class="h-[20px]  border-black "><h1 class="text-[12px] text-gray-600 font-bold ml-4 ">LOCATION</h1></section>
-             <section class="h-[30px]  border-black "><input class=" border-black w-[300px] ml-4 font-semibold focus:outline-none" type="text" placeholder="Add location"></section>
+             <section class="h-[30px]  border-black ">
+             
+             <!-- Input 1-->
+               <input class=" border-black w-[300px] ml-4 font-semibold focus:outline-none" 
+               type="text" 
+               placeholder="Add location" 
+               name="location">
+
+
+            </section>
             </div>
 
              <div class=" border-black">
-             <section class="h-[20px]  border-black "><h1 class="text-[12px] text-gray-600 font-bold ml-4 mt-1">GUESTS</h1></section>
-             <section class="h-[30px]  border-black "><div class=" border-black w-[300px] ml-4 font-semibold focus:outline-none"></div></section>
+             <section class="h-[20px]  border-black "><h1 class="text-[12px] text-gray-600 font-bold ml-4 mt-1 2xl:ml-50">GUESTS</h1></section>
+             <section class="h-[30px]  border-black ">
+              
+              <!-- Input 2 -->
+               <input class="text-[#8f8f8fd5] border-black w-[300px] ml-4 font-semibold 2xl:ml-50 focus:outline-none" 
+               id="divInputSuma" 
+               value="0" 
+               type="number" 
+               name="guest">
+
+
+            </section>
             </div>
 
             <section class=" border-black w-[375px] md:w-[100%] h-[40px]   justify-center items-center hidden lg:block">
-         <button class="bg-[rgb(247,56,56)] h-10 w-30 rounded-[15px] text-white font-semibold flex flex-row items-center justify-center gap-2"><img class="w-4 h-4" src="./src/images/icons/icons8-search-50.png">shearch</button>
+         <button class="bg-[rgb(247,56,56)] h-10 w-30 rounded-[15px] text-white font-semibold flex flex-row items-center justify-center gap-2 2xl:ml-30" id="buscarBoton"><img class="w-4 h-4" src="./src/images/icons/icons8-search-50.png">shearch</button>
       </section>
             
          </section>      
@@ -70,9 +89,9 @@
       <div class=" border-black"><h1 class="ml-5 font-bold text-[#3f3f3fa1] text-[14px]">Ages 13 or above</h1></div>
       
       <section class=" border-black w-[375px] flex items-center mt-2 mb-2">
-         <button class="border border-gray-500 rounded bg-[#e0e0e062] h-6 w-6 mr-6 ml-6 flex justify-center items-center" id="inputButtonMenos1"><img class="w-2 h-2" src="./src/images/icons/icons8-menos-24.png"></button>
-         <input type="number" class=" border-black w-6 focus:outline-none" value="0" id="inputAdult">
-         <button class="border border-gray-500 rounded bg-[#e0e0e062] h-6 w-6 ml-3 flex justify-center items-center" id="inputButtonMas1"><img class="w-2 h-2" src="./src/images/icons/icons8-más-24.png"></button>
+         <button type="button" class="border border-gray-500 rounded bg-[#e0e0e062] h-6 w-6 mr-10 ml-2 flex justify-center items-center" id="inputButtonMenos1"><img class="w-2 h-2" src="./src/images/icons/icons8-menos-24.png"></button>
+         <input type="number" class=" border-black w-10 focus:outline-none " value="0" id="inputAdult">
+         <button type="button" class="border border-gray-500 rounded bg-[#e0e0e062] h-6 w-6 ml-3 flex justify-center items-center" id="inputButtonMas1"><img class="w-2 h-2" src="./src/images/icons/icons8-más-24.png"></button>
       </section>
 </section>
    
@@ -86,9 +105,9 @@
       <div class=" border-black"><h1 class="ml-5 font-bold text-[#3f3f3fa1] text-[14px]">Ages 13 or above</h1></div>
       
       <section class=" border-black w-[375px]  flex items-center mt-2">
-         <button class="border border-gray-500 rounded bg-[#e0e0e062] h-6 w-6 mr-6 ml-6  flex justify-center items-center" id="inputButtonMenos2"><img class="w-2 h-2" src="./src/images/icons/icons8-menos-24.png"></button>
-         <input type="number" class=" border-black w-6 focus:outline-none" value="0" id="inputChildren">
-         <button class="border border-gray-500 rounded bg-[#e0e0e062] h-6 w-6 ml-3 flex justify-center items-center" id="inputButtonMas2"><img class="w-2 h-2" src="./src/images/icons/icons8-más-24.png"></button>
+         <button type="button" class="border border-gray-500 rounded bg-[#e0e0e062] h-6 w-6 mr-10 ml-2  flex justify-center items-center" id="inputButtonMenos2"><img class="w-2 h-2" src="./src/images/icons/icons8-menos-24.png"></button>
+         <input type="number" class=" border-black w-10 focus:outline-none" value="0" id="inputChildren">
+         <button type="button" class="border border-gray-500 rounded bg-[#e0e0e062] h-6 w-6 ml-3 flex justify-center items-center" id="inputButtonMas2"><img class="w-2 h-2" src="./src/images/icons/icons8-más-24.png"></button>
       </section>
 </section>
    
@@ -96,11 +115,11 @@
 
 <!--  Button de buscar -->      
       <section class=" border-black w-[375px] md:w-[100%] h-[40px] mt-22 flex justify-center items-center lg:hidden">
-         <button class="bg-[rgb(247,56,56)] h-10 w-30 rounded-[15px] text-white font-semibold flex flex-row items-center justify-center gap-2 "><img class="w-4 h-4" src="./src/images/icons/icons8-search-50.png">shearch</button>
+         <button class="bg-[rgb(247,56,56)] h-10 w-30 rounded-[15px] text-white font-semibold flex flex-row items-center justify-center gap-2 " id="buscarBoton"><img class="w-4 h-4" src="./src/images/icons/icons8-search-50.png">shearch</button>
       </section>
 
 
-</div>
+   </form>
 
 </div>
 

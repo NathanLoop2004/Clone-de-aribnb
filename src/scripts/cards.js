@@ -4,7 +4,7 @@ console.log(stays);
 
 
 
-let cardsContedor = document.querySelector("#sectionCard")
+export const cardsContedor = document.querySelector("#sectionCard")
 
 function traerSkeleton(){
     cardsContedor.innerHTML = "";
@@ -96,4 +96,6 @@ else{
 
     })
 }
+
+
 

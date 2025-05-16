@@ -12,8 +12,13 @@ import AbrirCerrarFiltro, { AgregaryRestarAmbosInput }  from './utils.js';
 import { agregarDivInput } from './utils.js';
 import { escuchadorDeInputs } from './utils.js';
 
+//Filtrado
+import { Filtrado } from './utils.js';
+
+
 traerCards()
 AbrirCerrarFiltro()
 AgregaryRestarAmbosInput()
 agregarDivInput()
 escuchadorDeInputs()
+Filtrado()
