@@ -5,10 +5,26 @@ console.log(stays);
 
 
 export const cardsContedor = document.querySelector("#sectionCard")
-
-function traerSkeleton(){
+  
+export function traerSkeleton(){
     cardsContedor.innerHTML = "";
-    cardsContedor.forEach()
+    for(let i = 0; i < stays.length; i++){
+      cardsContedor.innerHTML +=
+      `
+      
+<div role="status" class="max-w-sm animate-pulse gap-2 mt-4 border-black  h-[300px] flex flex-col">
+    <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4 mt-15"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+    <span class="sr-only">Loading...</span>
+</div>
+
+
+      `
+    }
 }
 
 

@@ -5,6 +5,12 @@
  */
 //Import de logica de cards
 import traerCards from './cards.js';
+//Import de Skeleton de cards
+import { traerSkeleton } from './cards.js';
+//Import de skeleton y filtrado ala vez
+import { traerFiltrado } from './utils.js';
+
+
 
 //Import de logica de Filter
 import AbrirCerrarFiltro, { AgregaryRestarAmbosInput }  from './utils.js';
@@ -16,9 +22,12 @@ import { escuchadorDeInputs } from './utils.js';
 import { Filtrado } from './utils.js';
 
 
-traerCards()
+
+traerSkeleton();
+setTimeout(() =>{traerCards()}, 3000);
+
 AbrirCerrarFiltro()
 AgregaryRestarAmbosInput()
 agregarDivInput()
 escuchadorDeInputs()
-Filtrado()
+

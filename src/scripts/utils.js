@@ -6,6 +6,7 @@
 import stays from './stays.js';
 import { cardsContedor } from './cards.js';
 import traerCards from './cards.js';
+import { traerSkeleton } from './cards.js';
 
 
 
@@ -218,32 +219,40 @@ export function Filtrado() {
     formulario.addEventListener("submit", function(e){
         e.preventDefault();
         cardsContedor.innerHTML = "";
-        let formdata1 = new FormData(formulario);
-        let input1 = formdata1.get("location");
-        let input2 = formdata1.get("guest");
+        traerSkeleton(); // Muestra el skeleton al filtrar
 
-        let filtradas = stays.filter(cards => {
-            if (input1 && input2) {
-                return cards.city.toLowerCase().includes(input1.toLowerCase()) && cards.beds >= Number(input2);
-            } else if (!input1 && input2) {
-                return cards.beds >= Number(input2);
-            } else if (input1 && !input2) {
-                return cards.city.toLowerCase().includes(input1.toLowerCase());
-            } else {
-                return true; // mostrar todas
-            }
-        });
+        setTimeout(() => {
+            cardsContedor.innerHTML = ""; // Limpia el skeleton
+            let formdata1 = new FormData(formulario);
+            let input1 = formdata1.get("location");
+            let input2 = formdata1.get("guest");
 
-        filtradas.forEach(renderCard);
+            let filtradas = stays.filter(cards => {
+                if (input1 && input2) {
+                    return cards.city.toLowerCase().includes(input1.toLowerCase()) && cards.beds >= Number(input2);
+                } else if (!input1 && input2) {
+                    return cards.beds >= Number(input2);
+                } else if (input1 && !input2) {
+                    return cards.city.toLowerCase().includes(input1.toLowerCase());
+                } else {
+                    return true; // mostrar todas
+                }
+            });
 
-        CerrarFiltro();
+            filtradas.forEach(renderCard);
+
+            CerrarFiltro();
+        }, 2000); // 2 segundos de skeleton, puedes ajustar el tiempo
     });
 }
 
-
-
-
-
+export function traerFiltrado() {
+    traerSkeleton();
+    setTimeout(() => {
+        Filtrado();
+        stays.forEach(renderCard); // Mostrar todas las cards al cargar
+    }, 3000);
+}
 
 
 
